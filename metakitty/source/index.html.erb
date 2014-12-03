@@ -20,7 +20,7 @@ title: Metakitty PoC
     :frequently_asked_questions
   ].each do |panel_class|
     panel_name = panel_class.to_s.split("_").map {|a| a.capitalize}.join(" ") %>
-  <%= panel "Hello, world, this is '#{panel_name}'", class: %w{panel_class foo}, align: :left %>
+  <%= panel "Hello, world, this is '#{panel_name}'", class: panel_class, align: :left %>
   <% end %>
 
   </body>
