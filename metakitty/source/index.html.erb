@@ -13,6 +13,8 @@ title: Metakitty PoC
   </head>
   <body>
 
+  <%= partial 'navbar' %>
+
   <% [
     :getting_started,
     :pro_tips,
@@ -20,7 +22,7 @@ title: Metakitty PoC
     :frequently_asked_questions
   ].each do |panel_class|
     panel_name = panel_class.to_s.split("_").map {|a| a.capitalize}.join(" ") %>
-  <%= panel "Hello, world, this is '#{panel_name}'", class: panel_class, align: :left %>
+  <%= panel panel_name, class: panel_class, align: :left %>
   <% end %>
 
   </body>
